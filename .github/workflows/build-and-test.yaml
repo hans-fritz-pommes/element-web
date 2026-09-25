@@ -253,9 +253,10 @@ jobs:
         permissions:
             contents: read
         with:
-            config: ${{ (github.event.pull_request.base.ref || github.ref_name) == 'develop' && 'element.io/nightly' || 'element.io/release' }}
-            version: ${{ case((github.event.pull_request.base.ref || github.ref_name) == 'develop' || github.event_name == 'merge_group', 'develop', '') }}
+            config: 'element.io/nightly'
+            version: 'develop'
             webapp-artifact: webapp
+            nightly: true
 
     build_ed_windows:
         needs: [prepare, prepare_ed]
