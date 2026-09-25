@@ -18,6 +18,7 @@ on:
     push:
         # We do not build on push to develop as the merge_group check handles that
         branches: [staging, master]
+    workflow_dispatch:
 
     # support triggering from other workflows
     workflow_call:
