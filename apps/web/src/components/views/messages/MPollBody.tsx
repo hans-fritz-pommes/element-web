@@ -227,7 +227,6 @@ export default class MPollBody extends React.Component<IBodyProps, IState> {
         this.syncIfNewEventFromMe();
     };
 
-
     /**
      * Runs when the local user clicks on an option
      */
